@@ -11,7 +11,7 @@ router.param("contactId", getContactById)
 router.post("/createcontact",
 [
     check("name").isLength({min:3}).withMessage("Name should be minimum 3 chars long!"),
-    check("email").isEmail().withMessage("Please enter the correct email!"),
+    check("email").isEmail().withMessage("Please enter the correct email address!"),
     check("message").isLength({min: 10}).withMessage("Message should be minimum 10 chars long!")
 ], 
 createContact)
